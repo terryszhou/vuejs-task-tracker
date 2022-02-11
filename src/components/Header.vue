@@ -2,9 +2,9 @@
   <header>
     <h1>{{ title }}</h1>
     <Button
-      color="green"
+      v-bind:color="showAddTask ? 'red' : 'green'"
       v-bind:text="showAddTask ? 'Close' : 'Add Task'"
-      v-on:toggle-add-task="$emit('toggle-add-task')" />
+      v-on:btn-click="$emit('toggle-add-task')" />
   </header>
 </template>
 
