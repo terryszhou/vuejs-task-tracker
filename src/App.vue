@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header />
+    <Header title="Task Tracker" />
   </div>
 </template>
 
@@ -10,8 +10,8 @@
   export default {
     name: 'App',
     components: {
-      Header
-    }
+      Header,
+    },
   }
 </script>
 
