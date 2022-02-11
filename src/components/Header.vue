@@ -4,7 +4,8 @@
     <Button
       v-bind:color="showAddTask ? 'red' : 'green'"
       v-bind:text="showAddTask ? 'Close' : 'Add Task'"
-      v-on:btn-click="$emit('toggle-add-task')" />
+      v-on:btn-click="$emit('toggle-add-task')" 
+      v-show="homePage" />
   </header>
 </template>
 
@@ -19,6 +20,15 @@
     },
     components: {
       Button,
+    },
+    computed: {
+      homePage() {
+        if (this.$route.path === "/") {
+          return true
+        } else {
+          return false
+        }
+      }
     }
   }
 </script>
