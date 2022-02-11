@@ -16,7 +16,7 @@
       "id": 3,
       "text": "Grocery Shopping",
       "day": "March 3rd, 11:00am",
-      "reminder": false
+      "reminder": true
     }
   ]
 }
