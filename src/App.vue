@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <Header title="Task Tracker" />
-    <Tasks v-on:delete-task="deleteTask" v-bind:tasks="tasks" />
+    <Tasks
+      v-on:delete-task="deleteTask"
+      v-bind:tasks="tasks"
+      v-on:toggle-reminder="toggleReminder" />
   </div>
 </template>
 
@@ -22,7 +25,16 @@
     },
     methods: {
       deleteTask(id) {
-        this.tasks = this.tasks.filter((task) => task.id !== id)
+        if (confirm("Are you sure?")) {
+          this.tasks = this.tasks.filter((task) => task.id !== id)
+        }
+      },
+      toggleReminder(id) {
+        this.tasks = this.tasks.map((task) => (
+          task.id === id 
+            ? {...task, reminder: !task.reminder} 
+            : task
+        ))
       }
     },
     created() {
