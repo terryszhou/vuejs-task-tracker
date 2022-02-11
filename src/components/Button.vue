@@ -1,8 +1,8 @@
 <template>
   <button
-    v-on:click="onClick()"
+    class="btn"
     v-bind:style="{ background: color }"
-    class="btn">
+    v-on:click="onClick()" >
     {{ text }}
   </button>
 </template>
@@ -16,7 +16,7 @@
     },
     methods: {
       onClick() {
-        console.log("Click")
+        this.$emit("toggle-add-task")
       }
     }
   }

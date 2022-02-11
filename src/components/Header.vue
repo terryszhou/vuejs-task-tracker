@@ -1,7 +1,10 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button text="Add Task" color="green" />
+    <Button
+      color="green"
+      v-bind:text="showAddTask ? 'Close' : 'Add Task'"
+      v-on:toggle-add-task="$emit('toggle-add-task')" />
   </header>
 </template>
 
@@ -12,6 +15,7 @@
     name: "Header",
     props: {
       title: String,
+      showAddTask: Boolean,
     },
     components: {
       Button,
