@@ -17,12 +17,6 @@
       "text": "Grocery Shopping",
       "day": "March 3rd, 11:00am",
       "reminder": false
-    },
-    {
-      "id": 89780,
-      "text": "Test",
-      "day": "Testing",
-      "reminder": false
     }
   ]
 }
