@@ -4,7 +4,7 @@
       title="Task Tracker"
       v-bind:show-add-task="showAddTask"
       v-on:toggle-add-task="toggleAddTask" />
-    <router-view v-bind:show-add-task="showAddTask"></router-view>
+    <router-view v-bind:show-add-task="showAddTask" />
     <Footer />
   </div>
 </template>
